@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MqttActivity">
+
+    <TextView
+        android:id="@+id/mqttServer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="MQTT URI"
+        android:textAlignment="center"
+        android:textSize="36px"
+        android:layout_marginTop="50dp"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom">
+
+        <!-- First Text Input -->
+        <EditText
+            android:id="@+id/client"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:hint="Enter Client ID"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            />
+
+        <!-- Second Text Input -->
+        <EditText
+            android:id="@+id/topic"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:hint="Enter Client Topic"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Button at the Bottom -->
+        <Button
+            android:id="@+id/button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Connect"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/subscribe"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Subscribe"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:textAlignment="center"
+        android:textSize="36px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
